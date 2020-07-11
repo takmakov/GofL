@@ -1,10 +1,10 @@
 # GofL
 Command line implementation for Conway's Game of Life
 
-birth - 3 neighbors  
-death from overpopulation - 4 neighbors  
-death from loneliness - 1 or less neighbors  
-survival to the next step - 2 or neighbors  
+**birth** - 3 neighbors  
+**survival** to the next step - 2 or 3 neighbors  
+**death** from overpopulation - 4 neighbors  
+**death** from loneliness - 1 or less neighbors   
 
 # Install
 pip install -r requirements.txt
