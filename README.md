@@ -14,7 +14,7 @@ pip install -r requirements.txt
 ```
 # How to run:
 
-Run 20 by 20 field with 40% live cells for 3 iterations with out putting in-line animation at 0.5 sec per frame.
+Run 20 by 20 field with 40% live cells for 3 iterations with in-line animation at 0.5 sec per frame.
 ```
 python life.py -s 20 -d 40 -fd 0.5 -i 3
 ```
