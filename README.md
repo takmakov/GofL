@@ -1,14 +1,16 @@
 # GofL
-Command line implementation for Conway's Game of Life
+Command line implementation for [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
+The game of life have simple rules:  
 **birth** - 3 neighbors  
 **survival** to the next step - 2 or 3 neighbors  
 **death** from overpopulation - 4 neighbors  
 **death** from loneliness - 1 or less neighbors   
 
 # Install
+```
 pip install -r requirements.txt
-
+```
 # How to run:
 
 Run 20 by 20 field with 40% live cells for 3 iterations with out putting in-line animation at 0.5 sec per frame.
@@ -46,6 +48,3 @@ Limits for arguments
 'iters': (1, 1001),
 'rnseed':(0, 1000)
 ```
-
-# References
-https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
