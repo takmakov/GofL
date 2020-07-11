@@ -212,7 +212,7 @@ if __name__ == '__main__':
 	def play_game():
 		game = Game()
 		game.animation()
-		for k, v in game.log.items():
+		for k, v in game.log.items():ip
 			print(f'{k}: {v}')
 		return game
 

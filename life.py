@@ -3,8 +3,6 @@ import pandas as pd
 import game
 import argparse
 import time
-import importlib
-importlib.reload(game)
 import random
 
 class Play():
