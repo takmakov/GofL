@@ -10,16 +10,11 @@ _SUSTAIN = (2, 3)
 _LONELY = (0, 1)
 _CROWDED = 4
 
-
-
-
 class Game:
-	"""
-	Generate game on a field with a fixed size
-	"""
+	'''Generate game oobject'''
 
 	def __init__(self, **kwargs):
-		"""Initiate a new game """
+		'''Initiate new game'''
 
 		self.x_size = kwargs.get('size', 10)
 		self.y_size = kwargs.get('size', 10)
@@ -42,7 +37,7 @@ class Game:
 		self._initiate_step()
 
 	def __str__(self):
-		""" Return str(self) """
+		'''Return str(self) for the object'''
 		atts = vars(self)
 		out = 'Game parameters:\n'
 		for k in atts.keys():
@@ -52,14 +47,14 @@ class Game:
 		return out
 
 	def _set_xys(self):
-		"""Create generator of (x, y) coordinates pairs"""
+		'''Create list of (x, y) coordinates pairs'''
 
 		self.xys = list(product(list(range(self.x_size)), list(range(self.y_size))))
 
 		return True
 
 	def _initiate_step(self):
-		"""Create initial step with randomly allocated cells"""
+		'''Create initial step with randomly distributed cells'''
 
 		density = self.cell_density
 		rnseed = self.rnseed
@@ -77,7 +72,7 @@ class Game:
 		return first_step
 
 	def add_to_history(self, step_count, step):
-		"""Add most recent step to history that logs all steps"""
+		'''Add most recent step to history that logs all steps'''
 		self.history[step_count] = step
 
 		return True
@@ -93,7 +88,7 @@ class Game:
 		return next_step
 
 	def update_cell(self, step, xy):
-		'''Update cell status for new iteration'''
+		'''Update cell status for a new iteration'''
 
 		neighbor_sum = self.count_neighbors(step, xy)
 
@@ -133,7 +128,7 @@ class Game:
 		return neighbors_count
 
 	def detect_repeat(self, new_num, new_step):
-		'''Detect if step is repeat of a previous step'''
+		'''Check if this step already happened in game history'''
 
 		if self.isrepeat:
 			pass
@@ -162,7 +157,7 @@ class Game:
 		return True
 
 	def run_until_repeat(self):
-		'''Run until fields start to cycle'''
+		'''Run until steps start to repeat'''
 		num = 0
 		while not self.isrepeat:
 			new_step = self.get_next_step(self.history[num])
@@ -175,7 +170,7 @@ class Game:
 		return num
 
 	def format_step(self, step):
-		'''Convert binary field into a picture'''
+		'''Format matrix 0 and 1 as a picture'''
 		alive = self.live_marker
 		dead = self.dead_marker
 		sep = self.sep_marker

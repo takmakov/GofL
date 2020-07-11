@@ -8,7 +8,7 @@ import random
 class Play():
 
 	def __init__(self):
-		"""Initiate a new play """
+		'''Initiate a new play'''
 
 		self.args_keys = []
 		self.len_gkeys = 0
@@ -19,7 +19,7 @@ class Play():
 		self.df = None
 
 	def _set_parser(self):
-		"""Set parser and parse arguments"""
+		'''Set parser for CLI arguments'''
 		parser = argparse.ArgumentParser()
 		arg_opts = self._set_arguments()
 		for a in arg_opts.values():
@@ -32,7 +32,7 @@ class Play():
 		return res
 
 	def _set_arguments(self):
-		'''Set arguments'''
+		'''Generate arguments for parser'''
 
 		arg_options = {
 			'size': ['-s', '--size',
@@ -72,6 +72,7 @@ class Play():
 		return arg_options
 
 	def check_limits(self):
+		'''Check that arguments are within limits'''
 		lims = {'size': (2, 51),
 				'cell_density': (10, 90),
 				'fdelay': (0.1, 1),
@@ -87,6 +88,7 @@ class Play():
 
 
 	def play_many_games(self):
+		'''Play many games for the given number of iterations'''
 		self.arg_d = vars(self.args_read)
 		self.check_limits()
 		arg_d = self.arg_d
@@ -111,6 +113,7 @@ class Play():
 		return True
 
 	def play_a_game(self):
+		'''Play a single game'''
 		arg_d = self.arg_d
 		g_keys = self.args_keys[:self.len_gkeys]
 		g_args = {k: arg_d[k] for k in g_keys}
