@@ -3,10 +3,10 @@ Command line implementation for [Conway's Game of Life](https://en.wikipedia.org
 
 Rules for the Game of Life:  
 
-**birth** - 3 neighbors  
+**birth** - empty cell with 3 neighbors  
 **survival** to the next step - 2 or 3 neighbors  
-**death** from overpopulation - 4 neighbors  
-**death** from loneliness - 1 or less neighbors   
+**death** from overpopulation - more than 3 neighbors  
+**death** from loneliness - less than 2 neighbors   
 
 # Install
 ```
