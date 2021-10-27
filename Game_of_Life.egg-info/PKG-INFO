@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: Game-of-Life
+Version: 0.0.1
+Summary: Command line implementation for game of life
+Home-page: https://github.com/takmakov/GofL
+Author: Pasha Takmakov
+Author-email: pavel.takmakov@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent[options]
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# GofL
+Command line implementation for [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+
+Rules for the Game of Life:  
+
+**birth** - empty cell with 3 neighbors  
+**survival** to the next step - 2 or 3 neighbors  
+**death** from overpopulation - more than 3 neighbors  
+**death** from loneliness - less than 2 neighbors   
+
+# Install
+```
+pip install -r requirements.txt
+```
+# How to run:
+
+Run 20 by 20 field with 40% live cells for 3 iterations with in-line animation at 0.5 sec per frame.
+```
+python life.py -s 20 -d 40 -fd 0.5 -i 3
+```
+Help  
+```
+python life.py -h
+```
+
+```
+usage: life.py [-h] [-s SIZE] [-d CELL_DENSITY] [-na] [-fd FDELAY] [-i ITERS]
+               [-rn RNSEED]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SIZE, --size SIZE  size of square game field
+  -d CELL_DENSITY, --cell_density CELL_DENSITY
+                        percent of live cells at start
+  -na, --noanimation    run without command line animation
+  -fd FDELAY, --fdelay FDELAY
+                        animation frame delay
+  -i ITERS, --iters ITERS
+                        number of game repeats
+  -rn RNSEED, --rnseed RNSEED
+                        select random seed to start
+
+```
+Limits for arguments  
+```
+'size': (2, 51),
+'cell_density': (10, 90),
+'fdelay': (0.1, 1),
+'iters': (1, 1001),
+'rnseed':(0, 1000)
+```
+
+
