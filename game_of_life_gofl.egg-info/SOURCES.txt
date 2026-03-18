@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+game_of_life_gofl.egg-info/PKG-INFO
+game_of_life_gofl.egg-info/SOURCES.txt
+game_of_life_gofl.egg-info/dependency_links.txt
+game_of_life_gofl.egg-info/entry_points.txt
+game_of_life_gofl.egg-info/requires.txt
+game_of_life_gofl.egg-info/top_level.txt
+gameoflife/__init__.py
+gameoflife/game.py
+gameoflife/life.py
