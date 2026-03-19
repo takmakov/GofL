@@ -10,22 +10,22 @@ Rules for the Game of Life:
 
 # Install
 ```
-pip install -r requirements.txt
+pip install game-of-life-gofl
 ```
 # How to run:
 
 Run 20 by 20 field with 40% live cells for 3 iterations with in-line animation at 0.5 sec per frame.
 ```
-python life.py -s 20 -d 40 -fd 0.5 -i 3
+gofl -s 20 -d 40 -fd 0.5 -i 3
 ```
-Help  
+Help
 ```
-python life.py -h
+gofl -h
 ```
 
 ```
-usage: life.py [-h] [-s SIZE] [-d CELL_DENSITY] [-na] [-fd FDELAY] [-i ITERS]
-               [-rn RNSEED]
+usage: gofl [-h] [-s SIZE] [-d CELL_DENSITY] [-na] [-fd FDELAY] [-i ITERS]
+            [-rn RNSEED]
 
 optional arguments:
   -h, --help            show this help message and exit
