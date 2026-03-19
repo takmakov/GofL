@@ -1,6 +1,6 @@
 from argparse import Namespace
 import pandas as pd
-import game
+from gameoflife import game
 import argparse
 import time
 import random
@@ -136,9 +136,13 @@ class Play():
 
 
 
-if __name__ == '__main__':
+def main():
 	p = Play()
 	p.play_many_games()
+
+
+if __name__ == '__main__':
+	main()
 
 
 
