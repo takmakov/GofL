@@ -1,6 +1,6 @@
 appnope==0.1.0
 backcall
-certifi==2020.6.20
+certifi==2022.12.7
 decorator==4.4.2
 ipython
 ipython-genutils==0.2.0
